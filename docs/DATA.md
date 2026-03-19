@@ -1,6 +1,6 @@
 # Data preparation
 
-GeoWorld uses the original CrossTask and COIN video annotations and RGB videos. The dataset action space is fixed by those annotations and is shared by preparation, training, evaluation, and planning. Downloaded metadata, videos, extracted features, and checkpoints belong under ignored data/checkpoint directories; they are not distributed with this repository.
+GeoWorld uses the original CrossTask and COIN video annotations and RGB videos. The dataset action space is fixed by those annotations and is shared by preparation, training, evaluation, and planning.
 
 ## Download annotations and obtain videos
 

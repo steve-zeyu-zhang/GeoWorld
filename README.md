@@ -63,7 +63,7 @@ for split in train val; do
 done
 ```
 
-For COIN, use `configs/coin.yaml`, the `data/coin/` directories, and its train/test splits. Use `--observation-mode image` to cache endpoint images for image-conditioned planning; the default uses video clips. Feature extraction fails on unreadable videos by default; `--skip-errors` explicitly permits omissions and writes an error report. Datasets, features, checkpoints, and generated outputs are excluded from Git.
+For COIN, use `configs/coin.yaml`, the `data/coin/` directories, and its train/test splits. Use `--observation-mode image` to cache endpoint images for image-conditioned planning; the default uses video clips. Feature extraction fails on unreadable videos by default; `--skip-errors` explicitly permits omissions and writes an error report.
 
 ### Training
 

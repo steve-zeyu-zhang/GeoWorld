@@ -1,0 +1,51 @@
+seed: 42
+model:
+  encoder:
+    name: vit_large
+    checkpoint: checkpoints/vjepa2-vitl.pt
+    pretrained: true
+    frames: 16
+    image_size: 256
+    spatial_pool: mean
+    temporal_pool: mean
+  predictor:
+    feature_dim: 1024
+    hidden_dim: 1024
+    depth: 24
+    num_heads: 16
+    num_actions: 778
+    curvature_init: 1.0
+    curvature_min: 0.1
+    curvature_max: 10.0
+    tangent_scale: 0.01
+data:
+  horizon: 4
+  workers: 4
+training:
+  amp: true
+  micro_batch_size: 8
+  weight_decay: 0.04
+  grad_clip: 1.0
+  log_every: 10
+  save_every: 1000
+  sft:
+    batch_size: 256
+    start_lr: 0.000075
+    lr: 0.000425
+    warmup_steps: 4500
+    hold_steps: 85500
+    decay_steps: 4500
+    lambda_tf: 0.5
+  grl:
+    batch_size: 128
+    start_lr: 0.00005
+    lr: 0.0002
+    warmup_steps: 2000
+    hold_steps: 18000
+    decay_steps: 5000
+    gamma: 0.99
+    beta: 0.1
+planning:
+  num_samples: 800
+  num_elites: 80
+  iterations: 10

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geoworld"
+version = "0.1.0"
+description = "Geometric world models for goal-conditioned visual planning"
+requires-python = ">=3.10"
+dependencies = [
+  "torch>=2.6,<2.7", "torchvision>=0.21,<0.22", "numpy>=1.24,<3",
+  "timm>=1.0,<1.1", "einops>=0.8,<0.9", "PyYAML>=6,<7",
+  "av>=14,<17", "Pillow>=10", "requests>=2.31", "tqdm>=4.66"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[tool.setuptools.packages.find]
+include = ["geoworld*", "third_party*"]
+
+[tool.setuptools.package-data]
+"third_party.vjepa2" = ["LICENSE", "APACHE-LICENSE", "provenance.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

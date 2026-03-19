@@ -1,0 +1,53 @@
+{
+  "repository": "https://github.com/facebookresearch/vjepa2",
+  "revision": "c2963a47433ecca0ad4f06ec28bcfa8cb5b5cefb",
+  "release": "V-JEPA 2, before V-JEPA 2.1",
+  "changes": "Python imports from src are namespaced as third_party.vjepa2.src. Algorithms and checkpoint-compatible rotary embeddings are unchanged. Empty __init__.py files make the vendor package importable.",
+  "files": [
+    {
+      "path": "src/models/vision_transformer.py",
+      "source_sha256": "f77b4241be731d0c4160844050383b6f9255f1a91147d1ff8041cbae3cd2a2ce",
+      "vendored_sha256": "cc186d5804efa3a941524394bfa2ffe55a4058e0646c8df7741da474b64b35d8"
+    },
+    {
+      "path": "src/models/ac_predictor.py",
+      "source_sha256": "5a520ad92b3f78b231aa153a5bbd9f800f880024974109a04d19aed6a0900643",
+      "vendored_sha256": "4c28488fc757ad46675fddc91539a8ed54538a81a7cdd229d1cde690efa6d3b3"
+    },
+    {
+      "path": "src/models/utils/modules.py",
+      "source_sha256": "b93f6c7e0747deb216419c000c2878f11a9189024a9adeacfd437e172396dff0",
+      "vendored_sha256": "b93f6c7e0747deb216419c000c2878f11a9189024a9adeacfd437e172396dff0"
+    },
+    {
+      "path": "src/models/utils/patch_embed.py",
+      "source_sha256": "1823c40b34410e70eb313360e21678e18a0ee5465b5d47de9f3d967c074f5a9d",
+      "vendored_sha256": "1823c40b34410e70eb313360e21678e18a0ee5465b5d47de9f3d967c074f5a9d"
+    },
+    {
+      "path": "src/models/utils/pos_embs.py",
+      "source_sha256": "e6d3b3863ade47b3734a3b443f1bcc93eab02e39bf596ea199517f68ccab443e",
+      "vendored_sha256": "e6d3b3863ade47b3734a3b443f1bcc93eab02e39bf596ea199517f68ccab443e"
+    },
+    {
+      "path": "src/masks/utils.py",
+      "source_sha256": "833f111a0fa5ffdbd3a6412e2dace2517c3c178f49c14f8bb631d9f6a070dfd0",
+      "vendored_sha256": "833f111a0fa5ffdbd3a6412e2dace2517c3c178f49c14f8bb631d9f6a070dfd0"
+    },
+    {
+      "path": "src/utils/tensors.py",
+      "source_sha256": "782b58bd2af456e184750e5318ab773105108383f61b280fe4c7a90f46add2c8",
+      "vendored_sha256": "782b58bd2af456e184750e5318ab773105108383f61b280fe4c7a90f46add2c8"
+    },
+    {
+      "path": "LICENSE",
+      "source_sha256": "cf9b17822d1fcd4ff32ccbe14183386fb3adf6f2ff92dc184130823f7fc28173",
+      "vendored_sha256": "cf9b17822d1fcd4ff32ccbe14183386fb3adf6f2ff92dc184130823f7fc28173"
+    },
+    {
+      "path": "APACHE-LICENSE",
+      "source_sha256": "a41e2fae9915ae56028f8dbd0bf27995f1907613cbcd2d81a61b010ad34e9fe9",
+      "vendored_sha256": "a41e2fae9915ae56028f8dbd0bf27995f1907613cbcd2d81a61b010ad34e9fe9"
+    }
+  ]
+}

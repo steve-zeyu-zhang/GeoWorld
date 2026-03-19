@@ -9,9 +9,9 @@ from functools import partial
 import torch
 import torch.nn as nn
 
-from src.models.utils.modules import ACBlock as Block
-from src.models.utils.modules import build_action_block_causal_attention_mask
-from src.utils.tensors import trunc_normal_
+from third_party.vjepa2.src.models.utils.modules import ACBlock as Block
+from third_party.vjepa2.src.models.utils.modules import build_action_block_causal_attention_mask
+from third_party.vjepa2.src.utils.tensors import trunc_normal_
 
 
 class VisionTransformerPredictorAC(nn.Module):

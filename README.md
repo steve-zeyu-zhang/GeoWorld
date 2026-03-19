@@ -78,7 +78,7 @@ python -m geoworld.train --stage grl --config configs/crosstask.yaml \
   --initialize outputs/crosstask/sft/last.pt --output outputs/crosstask/grl
 ```
 
-The paper configuration uses a frozen ViT-L encoder and a 24-layer predictor with width 1024 and 16 attention heads. SFT uses global batch size 256, 94,500 optimizer steps, and an equal weighting of teacher forcing and two-step rollout losses. GRL uses global batch size 128, 25,000 steps, discount `0.99`, and triangle weight `0.1`. Both stages use AdamW with weight decay `0.04`.
+The default configuration uses a frozen ViT-L encoder and a 24-layer predictor with width 1024 and 16 attention heads. SFT uses global batch size 256, 94,500 optimizer steps, and an equal weighting of teacher forcing and two-step rollout losses. GRL uses global batch size 128, 25,000 steps, discount `0.99`, and triangle weight `0.1`. Both stages use AdamW with weight decay `0.04`.
 
 For multiple GPUs, replace `python` with `torchrun --standalone --nproc_per_node=8`. `--batch-size` is global; `--micro-batch-size` controls the batch per GPU, with gradient accumulation filling the global batch. Use `--max-steps` for a short run and `--resume outputs/crosstask/sft/last.pt` to resume the same stage.
 

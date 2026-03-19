@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="GeoWorld">
+  <meta property="og:title" content="GeoWorld: Geometric World Models"/>
+  <meta property="og:description" content="GeoWorld: Geometric World Models"/>
+  <meta property="og:url" content="https://steve-zeyu-zhang.github.io/GeoWorld"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/main.png" />
+  <meta property="og:image:width" content="3840"/>
+  <meta property="og:image:height" content="1920"/>
+
+
+  <meta name="twitter:title" content="GeoWorld">
+  <meta name="twitter:description" content="GeoWorld: Geometric World Models">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/main.png">
+  <meta name="twitter:card" content="GeoWorld: Geometric World Models">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Human Motion Generation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>GeoWorld</title>
+  <link rel="icon" type="image/x-icon" href="static/images/run.svg">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script>
+    window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://steve-zeyu-zhang.github.io/">
+        <span class="icon">
+            <i class="fas fa-home"></i>
+        </span>
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://steve-zeyu-zhang.github.io/MotionMamba">
+              Motion Mamba
+            </a>
+            <a class="navbar-item" href="https://steve-zeyu-zhang.github.io/MotionAvatar">
+              Motion Avatar
+            </a>
+            <a class="navbar-item" href="https://steve-zeyu-zhang.github.io/InfiniMotion">
+              InfiniMotion
+            </a>
+            <a class="navbar-item" href="https://steve-zeyu-zhang.github.io/KMM">
+              KMM
+            </a>
+            </a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><span class="viridis">GeoWorld</span>: Geometric World Models</h1>
+            <h3 class="title is-3 publication-title"><a href="https://cvpr.thecvf.com/Conferences/2026" target="_blank" style="color: OrangeRed;">CVPR 2026</a></h3>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+              <a href="https://steve-zeyu-zhang.github.io/" target="_blank">Zeyu Zhang</a><sup>1</sup>&nbsp;</span>
+              <span class="author-block">
+              <a href="https://www.linkedin.com/in/danning-li-448039229/" target="_blank">Danning Li</a><sup>2</sup>&nbsp;</span>
+              <span class="author-block">
+              <a href="https://mbzuai.ac.ae/study/faculty/ian-reid/" target="_blank">Ian Reid</a><sup>2</sup>&nbsp;</span>
+              <span class="author-block">
+              <a href="https://users.cecs.anu.edu.au/~hartley/" target="_blank">Richard Hartley</a><sup>1</sup></span>
+                  </div>
+                  <p style="height: 10px;">&nbsp;</p> 
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><font size="4"><sup>1</sup><a href="https://www.anu.edu.au/" target="_blank">The Australian National University</a></font></span><br>
+                    <span class="author-block"><font size="4"><sup>2</sup><a href="https://mbzuai.ac.ae/" target="_blank">Mohamed bin Zayed University of Artificial Intelligence</a></font></span><br>
+                    <!-- <span class="eql-cntrb"><small><sup>*</sup>Equal Contribution.</small></span> -->
+                    <!-- <span class="eql-cntrb"><small><sup>✉</sup>Corresponding author.</small></span><br> -->
+                    <!-- <span class="eql-cntrb"><small><sup>†</sup>Work done while being a visiting student researcher at Peking University.</small></span> -->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Paper link -->
+                      <!-- <span class="link-block">
+                        <a href="https://openreview.net/pdf/ae5d92318295aa49f1b14880d5b42a5f65f431f0.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span> -->
+
+                    <!-- Supplementary link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+              <!-- ArXiv Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2602.23058" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+                  <!-- Github link -->
+                  <!--
+                  <span class="link-block">
+                    <a href="https://github.com/steve-zeyu-zhang/FlashMo" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                -->
+
+                <!-- Hugging Face Link -->
+                  <!-- <span class="link-block">
+                    <a href="https://huggingface.co/papers/2503.06955" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <img src="static/images/hfbw.svg" style="width: 70%;">
+                    </span>
+                    <span>Hugging Face</span>
+                  </a>
+                </span> -->
+
+                <!-- Citation Link -->
+                <span class="link-block">
+                  <a href="static/scholar.html" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span>BibTeX</span>
+                </a>
+              </span>
+
+                      
+            </div>
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <source src="static/videos/main.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Eric Prydz - Call on Me (French House)
+      </h2>
+    </div>
+  </div>
+</section> -->
+<!-- End teaser video -->
+
+
+<!-- News -->
+<div class="news">
+  <h2><font size="4"> <b>News:</b> </font></h2>
+  <ul>
+    <li><b>(02/21/2026)</b> &#127881; Our paper has been accepted to <a href="https://cvpr.thecvf.com/Conferences/2026"><b style="color: OrangeRed;">CVPR 2026</b></a>!</li>
+  </ul>
+</div>
+<!-- End News -->
+
+<p style="height: 50px;">&nbsp;</p>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+            Energy-based predictive world models provide a powerful approach for multi-step visual planning by reasoning over latent energy landscapes rather than generating pixels. However, existing approaches face two major challenges: <em>(i)</em> their latent representations are typically learned in Euclidean space, neglecting the underlying geometric and hierarchical structure among states, and <em>(ii)</em> they struggle with long-horizon prediction, which leads to rapid degradation across extended rollouts. To address these challenges, we introduce <strong>GeoWorld</strong>, a geometric world model that preserves geometric structure and hierarchical relations through a <em>Hyperbolic JEPA</em>, which maps latent representations from Euclidean space onto hyperbolic manifolds. We further introduce <em>Geometric Reinforcement Learning</em> for energy-based optimization, enabling stable multi-step planning in hyperbolic latent space. Extensive experiments on CrossTask and COIN demonstrate around <strong>3%</strong> SR improvement in 3-step planning and <strong>2%</strong> SR improvement in 4-step planning compared to the state-of-the-art V-JEPA 2.
+        </div>
+      </div>
+    </div>
+    <!-- Youtube -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/wEsuVGw4M8M?si=W_V2vD7HD1TrPJUq" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!-- End Youtube -->
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Energy-Based Planning</h2>
+</div>
+
+<p style="height: 50px;">&nbsp;</p>
+
+  <div class="image-container">
+    <center>
+    <img src="static/images/planning.svg" style="width: 50%;">
+    <div class="image-description">
+      <p style="height: 10px;">&nbsp;</p><br>
+      <p><b>Energy-based planning by GeoWorld.</b> The diagram shows a <em>Replace Memory Chip</em> task from the COIN dataset, where GeoWorld plans actions by following geodesics over a hyperbolic energy landscape rather than generating pixels.</p><br>
+    </div>
+    </center>
+  </div>
+
+</div>
+</section>
+
+
+<section class="section hero is-light">
+  <div class="my-hero-body">
+    <div class="container">
+  <h2 class="title is-3">Architecture</h2>
+</div>
+
+<p style="height: 50px;">&nbsp;</p>
+
+  <div class="image-container">
+    <center>
+    <img src="static/images/architecture.svg" style="width: 50%;">
+    <div class="image-description">
+      <p style="height: 10px;">&nbsp;</p><br>
+      <p><b>Overview of GeoWorld.</b> Our geometric world model integrates Hyperbolic JEPA for geometry-preserving latent dynamics and Geometric Reinforcement Learning for geodesic-consistent multi-step refinement. Together with energy-based planning using CEM, GeoWorld enables stable and geometry-aware long-horizon visual planning.</p><br>
+    </div>
+    </center>
+  </div>
+
+</div>
+</section>
+
+
+
+
+
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/poster.pdf" width="100%" height="1000">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{zhang2026geoworld,
+  title={GeoWorld: Geometric World Models},
+  author={Zhang, Zeyu and Li, Danning and Reid, Ian and Hartley, Richard},
+  journal={arXiv preprint arXiv:2602.23058},
+  year={2026}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+<!-- 
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer> -->
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>

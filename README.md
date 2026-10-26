@@ -38,7 +38,7 @@ python scripts/download_backbone.py --model vit_large \
 Download the complete annotations and obtain the original videos for [CrossTask](https://github.com/DmZhukov/CrossTask) and [COIN](https://coin-dataset.github.io/). Keep each video's original identifier as its filename, such as `data/crosstask/videos/<video_id>.mp4` and `data/coin/videos/<video_id>.mp4`.
 
 > [!NOTE]
-> Some CrossTask and COIN video links are no longer available. Please contact the authors of the respective dataset papers to request the original videos for those entries.
+> Some CrossTask and COIN video links are no longer available. Please contact the authors of the respective dataset papers to request the original videos for those entries. I also uploaded a [subset](https://huggingface.co/datasets/SteveZeyuZhang/CrossTask_COIN_3rd-party) of these datasets, but I don't own them. You may also want to take a look.
 
 ```bash
 python scripts/download_metadata.py --dataset all --output data/metadata

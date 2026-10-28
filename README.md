@@ -8,6 +8,7 @@
 
 [![Website](https://img.shields.io/badge/Website-Demo-fedcba?style=flat-square)](https://steve-zeyu-zhang.github.io/GeoWorld/)
 [![arXiv](https://img.shields.io/badge/arXiv-2602.23058-b31b1b?style=flat-square)](https://arxiv.org/abs/2602.23058v2)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Model-555555?style=flat-square)](https://huggingface.co/SteveZeyuZhang/GeoWorld)
 [![BibTeX](https://img.shields.io/badge/BibTeX-Citation-eeeeee?style=flat-square)](#citation)
 
 </div>
